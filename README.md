@@ -2,8 +2,10 @@
 
 ## This repository is used to demonstrate an issue in undici.fetch.
 
+### At the moment undici.fetch does not handle requests where url constains fragment:
+> URI = scheme ":" ["//" authority] path ["?" query] ["#" fragment]
 
-#### Reproduce
+### Reproduce
 - `npm ci`
 - `node index.js`
 - Result before the fix:
